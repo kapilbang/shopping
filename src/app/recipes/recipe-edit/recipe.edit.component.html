@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="row">
+            <label class="col-sm-3">Name :</label>
+            <div> <input class="col-sm-6" type="text" [(ngModel)] = "recipeName"></div>
+        </div>
+        <div class="row">
+            <label class="col-sm-3" >Desc :</label>
+            <div> <input class="col-sm-6" type="text" [(ngModel)] = "recipeDesc"></div>
+        </div>
+        <div class="row">
+            <label class="col-sm-3">Path :</label>
+            <div> <input class="col-sm-6" type="text" [(ngModel)] = "recipePath"></div>
+        </div>
+    </div>   
+    <div>
+        <button class="btn btn-primary" (click)="addData()">Save</button>
+        <div> <button class="btn btn-danger" (click)="cancel()" >Cancel</button></div>
+    </div> 
+
+</div>

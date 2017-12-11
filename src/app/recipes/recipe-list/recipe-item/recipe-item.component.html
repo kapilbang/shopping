@@ -1,0 +1,10 @@
+<a class="list-group-item clearfix" (click)="onReceipeSelect(resp)" routerLinkActive="active" >
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{resp.name}}</h4>
+    <p class="list-group-item-text">{{resp.description}}</p>
+  </div>
+  <span class="pull-right">
+     <img [src]="resp.imagePath" alt="{{resp.name}}" style="max-height: 50px" class="img-responsive">
+  </span>
+
+</a>

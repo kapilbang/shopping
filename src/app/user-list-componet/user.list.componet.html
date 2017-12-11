@@ -1,0 +1,45 @@
+<h1>
+User Data List
+</h1>
+
+
+<div class="row">
+            <div class="col-sm-4">
+
+                <div style="height: 400px; width: 400px;overflow-y:auto;">  
+                    <div *ngFor="let data of dataListUser">
+                    <div><a href="javascript:void(0)" (click)="showData(data)">Avatar</a> 
+                    <a href="javascript:void(0)" (click)="showData(data)" >{{data.login}}</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8" *ngIf="toShow">
+                    <div>
+                         <div>
+                              <h3 class="list-group-item-heading">{{singleUser.type}}</h3>
+
+                              <h3 class="list-group-item-heading">{{singleUser.location}}</h3>
+
+                              <h3 class="list-group-item-heading">{{singleUser.created_at}}</h3>
+
+                              <h3 class="list-group-item-heading">{{singleUser.site_admin | trueFalse}}</h3>
+
+                              <span class="pull-right">
+                                    <img [src]="singleUser.avatar_url" alt="{{singleUser.login}}" style="max-height: 50px" class="img-responsive">
+                                </span>
+                        </div>
+                            
+                          
+                    </div>
+                
+
+            </div>
+            
+
+</div>
+
+<div style="margin-top: 10px"> 
+<button class="btn btn-primary" (click)="getMoreData()">More</button>
+</div>
+
